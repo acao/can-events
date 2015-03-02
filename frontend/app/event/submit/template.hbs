@@ -1,0 +1,21 @@
+<form>
+  <div class="form-group">
+    <label class="control-label" for="title">Title</title>
+    {{input label="Title" class="form-control" value=title placeholder="Event title..."}}
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="title">Start</title>
+    {{pikaday-input class="form-control" format="MM/DD/YYYY" value=startDate yearRange="2015,2017"}}
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="title">End</title>
+    {{pikaday-input class="form-control" format="MM/DD/YYYY" value=endDate yearRange="2015,2017"}}
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="title">Description</title>
+    {{textarea class="form-control" value=description placeholder="Description"}}
+  </div>
+  <div class="form-group">
+    <button class="btn btn-lg btn-primary" {{action "submitEvent" post on="mouseUp"}}>Submit Event</button>
+  </div>
+</form>

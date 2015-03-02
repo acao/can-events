@@ -1,0 +1,65 @@
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Title</label>
+    <div class="col-sm-10">
+      {{input label="Title" class="form-control input-lg" value=title placeholder="Event title..."}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label " >From</label>
+    <div class="col-sm-4">
+      <div class="input-group">
+        <span class="input-group-addon"> <i class="fa fa-clock-o"></i></span>
+        {{input class="timepicker form-control" value=startDateTime }}
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="input-group">
+      <span class="input-group-addon"> <i class="fa fa-calendar"></i></span>
+      {{pikaday-input class="form-control" format="MM/DD/YYYY" value=startDate yearRange="2015,2017"}}
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Until</label>
+    <div class="col-sm-4">
+      <div class="input-group">
+        <span class="input-group-addon"> <i class="fa fa-clock-o"></i></span>
+        {{input class="timepicker form-control" value=endDateTime }}
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="input-group">
+        <span class="input-group-addon"> <i class="fa fa-calendar"></i></span>
+        {{pikaday-input class="form-control end-date" format="MM/DD/YYYY" value=endDate yearRange="2015,2017"}}
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="checkbox">
+        <label >
+          {{input type="checkbox"  class="isMultiday" name="isMultiday" checked=isMultiday }} Multiday
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2">Description</label>
+    <div class="col-sm-10">
+      {{textarea class="form-control" value=description placeholder="Description"}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2">Location</label>
+    <div class="col-sm-10">
+      {{#each location in locations}}
+        {{input class="form-control" value=location.name placeholder="Location"}}
+        {{input class="form-control" value=location.state placeholder="Location"}}
+      {{else}}
+      <p>  No locations! <a class="btn btn-small" href="#">Add one</a> </p>
+      {{/each}}
+    </div>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-lg btn-primary" {{action "doneEditing" post on="mouseUp"}}>Update This Event</button>
+  </div>
+</form>

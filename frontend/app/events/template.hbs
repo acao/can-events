@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row">
+  {{#each event in model}}
+  <div class="col-md-5 no-padding lib-item" data-category="view">
+    <div class="lib-panel">
+      <div class="row box-shadow">
+        <div class="col-xs-6">
+          {{#link-to 'event.index' event  }}<img class="lib-img-show" src="http://lorempixel.com/850/850/?random=123">{{/link-to}}
+        </div>
+        <div class="col-xs-6">
+          <div class="lib-row lib-header">
+            {{#link-to 'event.index' event  }} {{event.title}} {{/link-to}}
+            <div class="lib-header-seperator"></div>
+          </div>
+          <div class="lib-row lib-desc">
+            <p>{{event.content}}</p>
+            <em>{{event.startDate}} until {{event.endDate}}</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+  {{/each}}
+</div>
+</div>

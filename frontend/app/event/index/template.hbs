@@ -1,0 +1,9 @@
+<div class="page-header">
+  <h2>{{title}}<small class="">{{#link-to 'event.edit'}} <i class="fa fa-pencil"></i>  Edit</small>{{/link-to}} </h2> 
+</div>
+<div class="event-date lead">
+  <span class="start">{{startDate}}</span>
+  <span class="end">{{endDate}}</span>
+</div>
+<p>{{this.description}}</p>
+{{#link-to 'events.index' class='btn btn-lg btn-primary'}}<i class="fa fa-arrow-left"></i> All events {{/link-to}}

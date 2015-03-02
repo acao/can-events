@@ -1,0 +1,69 @@
+@import "bootstrap";
+@import "bootstrap/theme";
+@import "offcanvas";
+@import "cards";
+
+html, body {
+  margin: 40px;
+}
+
+.list-group-item {
+  user-select: none;
+  cursor: default;
+  background-color: rgba(0,150,0,0.1);
+}
+
+.list-group {
+  max-width: 400px;
+}
+
+ul[aria-hidden=true] {
+  display: none;
+}
+
+li[aria-expanded=true] > .badge {
+  display: none;
+}
+
+
+html, body {
+  height: 100%;
+}
+
+.navbar-toggle {
+  float: left;
+  margin-left: 15px;
+}
+
+.navmenu {
+  z-index: 1;
+}
+
+.canvas {
+  position: relative;
+  left: 0;
+  z-index: 2;
+  min-height: 100%;
+  padding: 50px 0 0 0;
+  background: #fff;
+}
+
+@media (min-width: 0) {
+  .navbar-toggle {
+    display: block; /* force showing the toggle */
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 0;
+  }
+  .navbar {
+    right: auto;
+    background: none;
+    border: none;
+  }
+  .canvas {
+    padding: 0;
+  }
+}

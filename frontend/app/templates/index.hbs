@@ -1,0 +1,73 @@
+<div id="application" role="application">
+
+  <h2 id="foods">Foods</h2>
+  {{#ivy-tree class="list-group" aria-labelledby="foods"}}
+  {{#ivy-tree-item class="" isExpanded=false}}
+  <span class="badge">5</span>
+  <span>Fruits</span>
+  {{#ivy-tree-group class="nav navmenu-nav"}}
+  {{#ivy-tree-item class=""}}Oranges{{/ivy-tree-item}}
+  {{#ivy-tree-item class=""}}Pineapples{{/ivy-tree-item}}
+  {{#ivy-tree-item class="" isExpanded=false}}
+    <span class="badge">3</span>
+    <span>Apples</span>
+    {{#ivy-tree-group class="nav navmenu-nav"}}
+      {{#ivy-tree-item class=""}}Macintosh{{/ivy-tree-item}}
+      {{#ivy-tree-item class="" isExpanded=false}}
+        <span class="badge">3</span>
+        <span>Granny Smith</span>
+        {{#ivy-tree-group class="nav navmenu-nav"}}
+          {{#ivy-tree-item class=""}}Washington State{{/ivy-tree-item}}
+          {{#ivy-tree-item class=""}}Michigan{{/ivy-tree-item}}
+          {{#ivy-tree-item class=""}}New York{{/ivy-tree-item}}
+        {{/ivy-tree-group}}
+      {{/ivy-tree-item}}
+      {{#ivy-tree-item class=""}}Fuji{{/ivy-tree-item}}
+    {{/ivy-tree-group}}
+  {{/ivy-tree-item}}
+  {{#ivy-tree-item class=""}}Bananas{{/ivy-tree-item}}
+  {{#ivy-tree-item class=""}}Pears{{/ivy-tree-item}}
+  {{/ivy-tree-group}}
+  {{/ivy-tree-item}}
+  {{#ivy-tree-item class="" isExpanded=false}}
+  <span class="badge">5</span>
+  {{#ivy-tree-group class="nav navmenu-nav"}}
+    {{#ivy-tree-item class=""}}Broccoli{{/ivy-tree-item}}
+    {{#ivy-tree-item class=""}}Carrots{{/ivy-tree-item}}
+    {{#ivy-tree-item class="" isExpanded=false}}
+  <span class="badge">3</span>
+  <span>Lettuce</span>
+  {{#ivy-tree-group class="nav navmenu-nav"}}
+  {{#ivy-tree-item class=""}}Romaine{{/ivy-tree-item}}
+  {{#ivy-tree-item class=""}}Iceberg{{/ivy-tree-item}}
+  {{#ivy-tree-item class=""}}Butterhead{{/ivy-tree-item}}
+  {{/ivy-tree-group}}
+  {{/ivy-tree-item}}
+  {{#ivy-tree-item class=""}}Spinach{{/ivy-tree-item}}
+  {{#ivy-tree-item class="" isExpanded=false}}
+  <span class="badge">9</span>
+  <span>Squash</span>
+  {{#ivy-tree-group class="nav navmenu-nav"}}
+  {{#ivy-tree-item class=""}}Acorn{{/ivy-tree-item}}
+  {{#ivy-tree-item class=""}}Ambercup{{/ivy-tree-item}}
+  {{#ivy-tree-item class=""}}Autumn Cup{{/ivy-tree-item}}
+  {{#ivy-tree-item class=""}}Hubbard{{/ivy-tree-item}}
+  {{#ivy-tree-item class=""}}Kabocha{{/ivy-tree-item}}
+  {{#ivy-tree-item class=""}}Butternut{{/ivy-tree-item}}
+  {{#ivy-tree-item class=""}}Spaghetti{{/ivy-tree-item}}
+  {{#ivy-tree-item class=""}}Sweet Dumpling{{/ivy-tree-item}}
+  {{#ivy-tree-item class=""}}Turban{{/ivy-tree-item}}
+  {{/ivy-tree-group}}
+  {{/ivy-tree-item}}
+  {{/ivy-tree-group}}
+  {{/ivy-tree-item}}
+  {{/ivy-tree}}
+
+</div>
+{{bs-datetimepicker date=date1 minDate=mindate maxDate=maxdate}}
+
+<div class="page-header">
+  <h1>Navmenu Template</h1>
+</div>
+<p class="lead">This example shows the navmenu element. If the viewport is <b>less than 992px</b> the menu will be placed the off canvas and will be shown with a slide in effect.</p>
+<p>Also take a look at the examples for a navmenu with <a href="../navmenu-push">push effect</a> and <a href="../navmenu-reveal">reveal effect</a>.</p>

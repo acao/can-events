@@ -1,0 +1,21 @@
+html, body {
+  margin: 20px;
+}
+
+.list-group-item {
+  user-select: none;
+  cursor: default;
+  background-color: rgba(0,150,0,0.1);
+}
+
+.list-group {
+  max-width: 400px;
+}
+
+ul[aria-hidden=true] {
+  display: none;
+}
+
+li[aria-expanded=true] > .badge {
+  display: none;
+}
